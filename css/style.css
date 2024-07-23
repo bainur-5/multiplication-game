@@ -1,0 +1,90 @@
+body {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.game-container {
+    text-align: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#problem-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#answer {
+    margin: 10px 0;
+    width: 70px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.disabled {
+    background-color: #A9A9A9;
+    cursor: not-allowed;
+}
+
+button.hover:hover {
+    background-color: #AFEEEE;
+}
+
+button.right {
+    background-color: #228B22;
+}
+
+button.wrong {
+    background-color: #FA8072;
+}
+
+#feedback {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.container-cube{
+    display: flex;
+    overflow: hidden;
+}
+.cube {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    margin: 2px;
+    transition: transform 0.5s;
+}
+.fadeIn{    
+    opacity: 0; /* Изначально скрываем элемент */
+    animation: fadeIn 0.5s forwards; /* Применяем анимацию появления */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10rem); /* Начальное положение вне экрана */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Конечное положение */
+    }
+}
