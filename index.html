@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Игра на умножение</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="game-container">
-        <div id="problem-container">
-            <span id="problem"></span>
-            <input type="number" id="answer"/>
-            <button id="submit-btn" class="disabled">Проверить</button>
+      <div id="problem-container">
+        <span id="resolved"></span>
+        <div>
+          <span id="problem"></span>
+          <input type="number" id="answer" />
         </div>
-        <div id="feedback">
-            
-        </div>
+        <button id="submit-btn" class="disabled">Проверить</button>
+      </div>
+      <div id="feedback"></div>
     </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

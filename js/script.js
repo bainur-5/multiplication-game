@@ -6,6 +6,7 @@ const problemElement = document.getElementById("problem");
 const answerInput = document.getElementById("answer");
 const submitBtn = document.getElementById("submit-btn");
 const feedback = document.getElementById("feedback");
+const resolved = document.getElementById("resolved")
 
 // рендер уровнении
 function generateProblem() {
@@ -20,22 +21,26 @@ function creatCube() {
   }
   return cubes;
 }
-
 //  Создание кубов
 function checkAnswer() {
   const userAnswer = parseInt(answerInput.value, 10);
   const correctAnswer = currentProblem * N;
 
   if (userAnswer === correctAnswer) {
+    
+    const newResolved = document.createElement("span");
+    newResolved.innerHTML =  `${currentProblem} x ${N} = ${userAnswer}`;
+    resolved.appendChild(newResolved)
+
     const newCubeContainer = document.createElement("div");
     newCubeContainer.classList = "container-cube fadeIn";
     newCubeContainer.innerHTML = creatCube();
+
 
     feedback.appendChild(newCubeContainer);
 
     submitBtn.style.backgroundColor = "#228B22"
     submitBtn.style.color = "#fff"
-
     setTimeout(() => {
       newCubeContainer.classList.remove("fadeIn");
       submitBtn.style.backgroundColor = "";
@@ -52,7 +57,7 @@ function checkAnswer() {
     setTimeout(() => {
       answerInput.style.backgroundColor = "";
       submitBtn.style.backgroundColor = "";
-    }, 500);
+    }, 1000);
   }
   toggleButton();
 }
