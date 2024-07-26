@@ -52,10 +52,10 @@ function checkAnswer() {
     
     generateProblem();
   } else {
-    answerInput.style.backgroundColor = "#FA8072";
+    answerInput.style.color = "#FA8072";
     submitBtn.style.backgroundColor = "#FA8072";
     setTimeout(() => {
-      answerInput.style.backgroundColor = "";
+      answerInput.style.color = "";
       submitBtn.style.backgroundColor = "";
     }, 1000);
   }
